@@ -21,12 +21,13 @@ import {
 } from "react-icons/fa";
 import { MdEmail, MdLocationOn, MdPhone } from "react-icons/md";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 // Importing draggable components dynamically
 const DragDropContext = dynamic(() => import("react-beautiful-dnd").then((mod) => mod.DragDropContext), { ssr: false });
 const Droppable = dynamic(() => import("react-beautiful-dnd").then((mod) => mod.Droppable), { ssr: false });
 const Draggable = dynamic(() => import("react-beautiful-dnd").then((mod) => mod.Draggable), { ssr: false })
 const Template21 = () => {
-    const { resumeData, setResumeData, headerColor } = useContext(ResumeContext);
+    const { resumeData, setResumeData, headerColor,backgroundColorss } = useContext(ResumeContext);
     const icons = [
         { name: "github", icon: <FaGithub /> },
         { name: "linkedin", icon: <FaLinkedin /> },
@@ -42,9 +43,15 @@ const Template21 = () => {
           <div class="flex"> 
 
           
-            <div class="bg-cyan-500 p-5 w-1/3">
+            <div class="bg-cyan-500 p-5 w-1/3" style={{ backgroundColor: backgroundColorss }}>
                 <div class="rounded-full border-solid	border-white-500 mb-5">
-                  <img src="img/profile_one.png"></img>
+                <Image
+                    src={resumeData.profilePicture}
+                    alt="profile"
+                    width={100}
+                    height={100}
+                    className=" h-full w-full object-cover"
+                  />
                   <div class="border-solid rounded border-b-2 border-white-800 mb-2 mt-2"></div>
                 </div>
                 <div className="mb-8">
