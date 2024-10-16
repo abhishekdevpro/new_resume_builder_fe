@@ -21,6 +21,7 @@ import {
 } from "react-icons/fa";
 import { MdEmail, MdLocationOn, MdPhone } from "react-icons/md";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 // Importing draggable components dynamically
 const DragDropContext = dynamic(() => import("react-beautiful-dnd").then((mod) => mod.DragDropContext), { ssr: false });
 const Droppable = dynamic(() => import("react-beautiful-dnd").then((mod) => mod.Droppable), { ssr: false });
@@ -69,7 +70,13 @@ const Template25 = () => {
               </div>
             </div>
             <div class="mb-5 w-1/3">
-                  <img src="img/profile_one.png"></img>
+            <Image
+                    src={resumeData.profilePicture}
+                    alt="profile"
+                    width={100}
+                    height={100}
+                    className=" h-full w-full object-cover"
+                  />
             </div>
         </div>
         <div class="flex gap-2 items-start justify-between">
