@@ -41,9 +41,9 @@ const Template23 = () => {
     return (
         <div className="max-w-3xl mx-auto p-5 bg-white-500 shadow-md">
         {/* <div class="absolute bg-yellow-600 h-1/5 w-5/12	 bg-cover opacity-10"></div> */}
-        <div class="flex gap-1 items-start bg-neutral-200	">
+        <div class="flex gap-1 items-start bg-neutral-200	" style={{ backgroundColor: backgroundColorss }}>
         
-          <div class=" w-1/3 p-5 	" style={{ backgroundColor: backgroundColorss }}>
+          <div class=" w-1/3 p-5 	" >
             <div class="border-solid border-cyan-900 mb-5">
             <Image
                     src={resumeData.profilePicture}

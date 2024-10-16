@@ -28,7 +28,7 @@ const DragDropContext = dynamic(() => import("react-beautiful-dnd").then((mod) =
 const Droppable = dynamic(() => import("react-beautiful-dnd").then((mod) => mod.Droppable), { ssr: false });
 const Draggable = dynamic(() => import("react-beautiful-dnd").then((mod) => mod.Draggable), { ssr: false })
 const Template16 = () => {
-    const { resumeData, setResumeData, headerColor } = useContext(ResumeContext);
+    const { resumeData, setResumeData, headerColor,backgroundColorss } = useContext(ResumeContext);
     const icons = [
         { name: "github", icon: <FaGithub /> },
         { name: "linkedin", icon: <FaLinkedin /> },
@@ -41,8 +41,8 @@ const Template16 = () => {
 
     return (
         <div className="max-w-3xl mx-auto p-5 bg-white-500 shadow-md">
-        <div class="flex gap-1 items-start">
-          <div class="bg-gray-900 w-1/3 p-5 h-full">
+        <div class="flex gap-1 items-start ">
+          <div class="bg-gray-900 w-1/3 p-5 " style={{ backgroundColor: backgroundColorss }}>
             <div class="rounded-full border-solid	border-white-500 mb-5">
             <Image
                     src={resumeData.profilePicture}
@@ -329,24 +329,7 @@ const Template16 = () => {
                           </Droppable>
                         )}
                 </div>
-                <div class=" text-left">
-                  <h2 class="text-2xl font-bold uppercase text-black-900 mb-5">Reference</h2>
-                  <div class="border-solid border-2 border-black mb-5"></div>	
-                  <div class="flex justify-between">
-                    <div class="mb-5">
-                      <p class="text-xl font-semibold mb-2 uppercase">Estelle Darcy</p>	
-                      <p class="font-light mb-2">Wardlere Inc. / CTO</p>
-                      <p class="font-light mb-2">Phone: 123-456-7890</p>
-                      <p class="font-light mb-2">Email: abc@gmail.com</p>
-                    </div>
-                    <div class="mb-5">
-                      <p class="text-xl font-semibold mb-2 uppercase">Harper Richard</p>	
-                      <p class="font-light mb-2">Wardlere Inc. / CEO</p>
-                      <p class="font-light mb-2">Phone: 123-456-7890</p>
-                      <p class="font-light mb-2">Email: abc@gmail.com</p>
-                    </div>
-                  </div>
-                </div>
+         
               
               </div>
           </div>
