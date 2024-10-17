@@ -38,13 +38,13 @@ const Template22 = () => {
     ];
 
     return (
-        <div className="max-w-3xl mx-auto p-5 bg-white-500 shadow-md">
+        <div className="max-w-3xl mx-auto px-5 bg-white-500 shadow-md">
           <div class=""> 
             <div class="flex mb-5">
-                <div class="ml-5 p-5">
+                <div class="ml-5 px-5">
                   <img src="img/profile_one.png"></img>
                 </div>
-                <div class="p-5">
+                <div class="px-5">
                     <h1 className="text-4xl font-bold mb-2 text-blue-900" style={{ color: headerColor }}>{resumeData.name}</h1>
                     <h2 className="text-2xl font-semibold mb-2 text-black" style={{ color: headerColor }}>{resumeData.position}</h2>	
 
@@ -65,7 +65,7 @@ const Template22 = () => {
                     </div>
                 </div>
             </div>
-            <div className="p-5">
+            <div className="px-5">
               <div class="flex">
                   <h2 className="text-xl  text-blue-900	 font-bold mb-2" style={{ color: headerColor }}>ABOUT ME</h2>
                   
@@ -75,7 +75,7 @@ const Template22 = () => {
               {resumeData.summary}
               </p>
             </div>
-            <div className="p-5">
+            <div className="px-5">
                   <h2 className="text-xl text-blue-900 font-bold mb-4" style={{ color: headerColor }}>EXPERIENCE</h2>
                   
                   <div>
@@ -266,7 +266,7 @@ const Template22 = () => {
                   </div>
                 
                 </div>
-                <div className="p-5">
+                <div className="px-5">
                   <h2 className="text-xl text-blue-900 mb-5 font-bold" style={{ color: headerColor }}>EDUCATION</h2>
                   <div class="border-solid border-b-2 border-blue-900 mb-5"></div>
                   <div className="mb-4 ">
@@ -290,9 +290,9 @@ const Template22 = () => {
                     
                   </div>
                 </div>
-                <div className="p-5">
+                <div className="px-5">
                     <h2 className="text-xl capitalize text-blue-900 font-bold" style={{ color: headerColor }}>SKILLS</h2>
-                    <div class="border-solid  border-b-2 border-blue-900 mb-2 mt-2"></div>
+                    <div class="border-solid  border-b-2 border-blue-900 mb-2 "></div>
                     <Droppable droppableId="skills" type="SKILLS">
                               {(provided) => (
                                 <div {...provided.droppableProps} ref={provided.innerRef}>
@@ -321,30 +321,13 @@ const Template22 = () => {
                               )}
                             </Droppable>
                     </div>
-                    <div className="p-5">
+                    <div className="px-5">
                       <h2 className="text-2xl font-bold text-blue-900 border-blue-900" style={{ color: headerColor }}>LANGUAGE</h2>
                       <div className="text-black mb-4 font-bold ">
                       <Language  languages={resumeData.languages} />
                       </div>
                     </div>
-                    <div class=" text-left p-5">
-                      <h2 class="text-2xl font-bold uppercase text-blue-900 mb-5">Reference</h2>
-                      <div class="border-solid border-b-2 border-blue-900 mb-5"></div>	
-                      <div class="flex space-between">
-                        <div class="mb-5">
-                          <p class="text-xl capitalize text-black font-bold mb-5">Estelle Darcy</p>	
-                          <p class="font-light mb-2 text-sm text-black">Wardlere Inc. / CTO</p>
-                          <p class="font-light mb-2 text-sm text-black">Phone: 123-456-7890</p>
-                          <p class="font-light mb-2 text-sm text-black">Email: abc@gmail.com</p>
-                        </div>
-                        <div class="mb-5">
-                          <p class="text-xl capitalize text-black font-bold mb-5">Harper Richard</p>	
-                          <p class="font-light mb-2 text-sm text-black">Wardlere Inc. / CEO</p>
-                          <p class="font-light mb-2 text-sm text-black">Phone: 123-456-7890</p>
-                          <p class="font-light mb-2 text-sm text-black">Email: abc@gmail.com</p>
-                        </div>
-                      </div>
-                    </div>            
+                       
 
             
             

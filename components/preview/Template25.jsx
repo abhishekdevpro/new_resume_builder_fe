@@ -332,23 +332,7 @@ const Template25 = () => {
                 </div>
                 
               </div>
-              <div class=" text-left">
-                  <h2 class="text-xl font-bold uppercase text-black mb-5">Reference</h2>
-                  <div class="">
-                    <div class="mb-5">
-                      <p class="text-l font-semibold mb-2 uppercase text-black">Estelle Darcy</p>	
-                      <p class="font-light mb-2 text-black">Wardlere Inc. / CTO</p>
-                      <p class="font-light mb-2 text-black">Phone: 123-456-7890</p>
-                      <p class="font-light mb-2 text-black">Email: abc@gmail.com</p>
-                    </div>
-                    <div class="mb-5">
-                      <p class="text-l font-semibold mb-2 uppercase text-black">Harper Richard</p>	
-                      <p class="font-light mb-2 text-black">Wardlere Inc. / CEO</p>
-                      <p class="font-light mb-2 text-black">Phone: 123-456-7890</p>
-                      <p class="font-light mb-2 text-black">Email: abc@gmail.com</p>
-                    </div>
-                  </div>
-                </div>
+           
             </div>
             
         </div>

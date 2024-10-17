@@ -94,24 +94,7 @@ const Template21 = () => {
                               )}
                             </Droppable>
                     </div>
-                    <div class=" text-left">
-                      <h2 class="text-2xl font-bold uppercase text-white mb-5">Reference</h2>
-                      <div class="border-solid border-b-2 border-white mb-5"></div>	
-                      <div class="">
-                        <div class="mb-5">
-                          <p class="text-xl capitalize text-white font-bold mb-5">Estelle Darcy</p>	
-                          <p class="font-light mb-2 text-sm text-white">Wardlere Inc. / CTO</p>
-                          <p class="font-light mb-2 text-sm text-white">Phone: 123-456-7890</p>
-                          <p class="font-light mb-2 text-sm text-white">Email: abc@gmail.com</p>
-                        </div>
-                        <div class="mb-5">
-                          <p class="text-xl capitalize text-white font-bold mb-5">Harper Richard</p>	
-                          <p class="font-light mb-2 text-sm text-white">Wardlere Inc. / CEO</p>
-                          <p class="font-light mb-2 text-sm text-white">Phone: 123-456-7890</p>
-                          <p class="font-light mb-2 text-sm text-white">Email: abc@gmail.com</p>
-                        </div>
-                      </div>
-                    </div>
+                   
             </div>
             <div class="bg-slate-300  w-2/3">
                 <div class="bg-cyan-800 p-5">

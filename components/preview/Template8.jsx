@@ -71,35 +71,37 @@ const Template8 = () => {
         <p>{resumeData.summary}</p>
       </div>
       <div>
-        <h3 className="text-lg font-semibold text-gray-700 border-b border-gray-300 pb-1 mb-3" style={{ color: headerColor }}>LEADERSHIP</h3>
         <Droppable droppableId="skills" type="SKILLS">
-          {(provided) => (
-            <div {...provided.droppableProps} ref={provided.innerRef}>
-              {resumeData.skills.map((skill, index) => (
-                <Draggable
-                  key={`SKILLS-${index}`}
-                  draggableId={`SKILLS-${index}`}
-                  index={index}
-                >
-                  {(provided, snapshot) => (
-                    <div
-                      ref={provided.innerRef}
-                      {...provided.draggableProps}
-                      {...provided.dragHandleProps}
-                      className={`hover:scale-105 transition-transform duration-300 mb-1 ${snapshot.isDragging &&
-                        "outline-dashed outline-2 outline-gray-400 bg-white"
-                        }`}
-                    >
-                      <p><h3 className='font-bold'>{skill.title}</h3>  <span className="text-[#000]">{skill.skills}</span></p>
-                      <p > </p>
+                  {(provided) => (
+                    <div {...provided.droppableProps} ref={provided.innerRef}>
+                     {Array.isArray(resumeData?.skills) ? (
+    resumeData.skills.map((skill, index) => (
+                        <Draggable
+                          key={`SKILLS-${index}`}
+                          draggableId={`SKILLS-${index}`}
+                          index={index}
+                        >
+                          {(provided, snapshot) => (
+                            <div
+                              ref={provided.innerRef}
+                              {...provided.draggableProps}
+                              {...provided.dragHandleProps}
+                              className={`hover:scale-105 transition-transform duration-300 mb-1 ${
+                                snapshot.isDragging ? "outline-dashed outline-2 outline-gray-400 bg-white" : ""
+                              }`}
+                            >
+                              <Skills title={skill.title} skills={skill.skills} />
+                            </div>
+                          )}
+                        </Draggable>
+                      ))
+                    ) : (
+                      <p>No skills available</p> // Fallback content if skills are undefined or not an array
+                    )}
+                      {provided.placeholder}
                     </div>
                   )}
-                </Draggable>
-              ))}
-              {provided.placeholder}
-            </div>
-          )}
-        </Droppable>
+                </Droppable>
       </div>
     </div>
     <div className="w-2/3 p-5">
