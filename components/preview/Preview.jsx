@@ -215,11 +215,18 @@ const Preview = ({ selectedTemplate }) => {
   const changeFontSize = (size) => formatText("fontSize", size);
   const alignText = (alignment) => formatText(`justify${alignment}`);
   const toggleLink = () => {
+    const selectedText = window.getSelection().toString();
+    if (!selectedText) {
+      alert("Please select the text you want to link.");
+      return;
+    }
+    
     const url = prompt("Enter the URL:");
     if (url) {
       formatText("createLink", url);
     }
   };
+  
 
   useKeyboardShortcut("b", true, toggleBold);
   useKeyboardShortcut("i", true, toggleItalic);
