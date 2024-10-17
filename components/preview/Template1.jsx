@@ -93,7 +93,7 @@ const Template1 = () => {
   };
   return (
     <div className="">
-     <div className="max-w-4xl mx-auto bg-white p-8 border border-gray-200 rounded-lg shadow-lg">
+     <div className="max-w-4xl mx-auto bg-white p-8 border border-gray-200 rounded-lg shadow-lg editable-content" contentEditable="true" >
       {/* <h1 style={{ color: headerColor }}>Template 1</h1>*/}  
         <div className="">
           <A4PageWrapper >
@@ -109,52 +109,7 @@ const Template1 = () => {
               target="body"
               menu={() => (
                 <>
-                  <MenuButton
-                    title="Bold (Ctrl+B)"
-                    icon={<FaBold />}
-                    onClick={toggleBold}
-                  />
-                  <MenuButton
-                    title="Italic (Ctrl+I)"
-                    icon={<FaItalic />}
-                    onClick={toggleItalic}
-                  />
-                  <MenuButton
-                    title="Underline (Ctrl+U)"
-                    icon={<FaUnderline />}
-                    onClick={toggleUnderline}
-                  />
-                  <MenuButton
-                    title="Increase Font Size"
-                    icon={<FaPlus />}
-                    onClick={() => changeFontSize(4)}
-                  />
-                  <MenuButton
-                    title="Decrease Font Size"
-                    icon={<FaMinus />}
-                    onClick={() => changeFontSize(2)}
-                  />
-
-                  <MenuButton
-                    title="Align Left"
-                    icon={<FaAlignLeft />}
-                    onClick={() => alignText('Left')}
-                  />
-                  <MenuButton
-                    title="Align Center"
-                    icon={<FaAlignCenter />}
-                    onClick={() => alignText('Center')}
-                  />
-                  <MenuButton
-                    title="Align Right"
-                    icon={<FaAlignRight />}
-                    onClick={() => alignText('Right')}
-                  />
-                    <MenuButton
-                title="Check Grammar"
-                icon={<FaSpellCheck />}
-                onClick={checkGrammar}
-              />
+                 
                 </>
               )}
             />
@@ -253,7 +208,7 @@ const Template1 = () => {
                   {(provided) => (
                     <div {...provided.droppableProps} ref={provided.innerRef}>
                      {Array.isArray(resumeData?.skills) ? (
-    resumeData.skills.map((skill, index) => (
+                       resumeData.skills.map((skill, index) => (
                         <Draggable
                           key={`SKILLS-${index}`}
                           draggableId={`SKILLS-${index}`}

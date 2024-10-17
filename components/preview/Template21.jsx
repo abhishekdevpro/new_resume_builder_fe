@@ -21,12 +21,13 @@ import {
 } from "react-icons/fa";
 import { MdEmail, MdLocationOn, MdPhone } from "react-icons/md";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 // Importing draggable components dynamically
 const DragDropContext = dynamic(() => import("react-beautiful-dnd").then((mod) => mod.DragDropContext), { ssr: false });
 const Droppable = dynamic(() => import("react-beautiful-dnd").then((mod) => mod.Droppable), { ssr: false });
 const Draggable = dynamic(() => import("react-beautiful-dnd").then((mod) => mod.Draggable), { ssr: false })
 const Template21 = () => {
-    const { resumeData, setResumeData, headerColor } = useContext(ResumeContext);
+    const { resumeData, setResumeData, headerColor,backgroundColorss } = useContext(ResumeContext);
     const icons = [
         { name: "github", icon: <FaGithub /> },
         { name: "linkedin", icon: <FaLinkedin /> },
@@ -42,9 +43,15 @@ const Template21 = () => {
           <div class="flex"> 
 
           
-            <div class="bg-cyan-500 p-5 w-1/3">
+            <div class="bg-cyan-500 p-5 w-1/3" style={{ backgroundColor: backgroundColorss }}>
                 <div class="rounded-full border-solid	border-white-500 mb-5">
-                  <img src="img/profile_one.png"></img>
+                <Image
+                    src={resumeData.profilePicture}
+                    alt="profile"
+                    width={100}
+                    height={100}
+                    className=" h-full w-full object-cover"
+                  />
                   <div class="border-solid rounded border-b-2 border-white-800 mb-2 mt-2"></div>
                 </div>
                 <div className="mb-8">
@@ -87,24 +94,7 @@ const Template21 = () => {
                               )}
                             </Droppable>
                     </div>
-                    <div class=" text-left">
-                      <h2 class="text-2xl font-bold uppercase text-white mb-5">Reference</h2>
-                      <div class="border-solid border-b-2 border-white mb-5"></div>	
-                      <div class="">
-                        <div class="mb-5">
-                          <p class="text-xl capitalize text-white font-bold mb-5">Estelle Darcy</p>	
-                          <p class="font-light mb-2 text-sm text-white">Wardlere Inc. / CTO</p>
-                          <p class="font-light mb-2 text-sm text-white">Phone: 123-456-7890</p>
-                          <p class="font-light mb-2 text-sm text-white">Email: abc@gmail.com</p>
-                        </div>
-                        <div class="mb-5">
-                          <p class="text-xl capitalize text-white font-bold mb-5">Harper Richard</p>	
-                          <p class="font-light mb-2 text-sm text-white">Wardlere Inc. / CEO</p>
-                          <p class="font-light mb-2 text-sm text-white">Phone: 123-456-7890</p>
-                          <p class="font-light mb-2 text-sm text-white">Email: abc@gmail.com</p>
-                        </div>
-                      </div>
-                    </div>
+                   
             </div>
             <div class="bg-slate-300  w-2/3">
                 <div class="bg-cyan-800 p-5">

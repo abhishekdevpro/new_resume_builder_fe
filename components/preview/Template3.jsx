@@ -285,7 +285,7 @@ const Template3 = () => {
                         "outline-dashed outline-2 outline-gray-400 bg-white"
                         }`}
                     >
-                      <p><h3 className='text-teal-600' style={{ color: headerColor }}>{skill.title}</h3>  <span className="text-gray-500">{skill.skills}</span></p>
+                      <p><h3 className='text-teal-600' style={{ color: headerColor }}>{skill.title}</h3>  <span className="text-gray-500">{skill.skills.join(", ")}</span></p>
                       <p > </p>
                     </div>
                   )}

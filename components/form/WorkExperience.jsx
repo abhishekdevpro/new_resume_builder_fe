@@ -35,8 +35,7 @@ const WorkExperience = () => {
 
   const removeWorkExperience = (index) => {
     const newWorkExperience = [...resumeData.workExperience];
-    newWorkExperience[index] = newWorkExperience[newWorkExperience.length - 1];
-    newWorkExperience.pop();
+    newWorkExperience.splice(index, 1); // Remove the item at the specified index
     setResumeData({ ...resumeData, workExperience: newWorkExperience });
   };
 
@@ -148,6 +147,16 @@ const WorkExperience = () => {
             value={workExperience.keyAchievements}
             onChange={(e) => handleWorkExperience(e, index)}
           />
+          {/* Remove Button */}
+          {resumeData.workExperience.length > 1 && (
+            <button
+              type="button"
+              className="mt-2 text-red-500"
+              onClick={() => removeWorkExperience(index)}
+            >
+              Remove
+            </button>
+          )}
           {searchResults.length > 0 && (
             <ul className="search-results-list">
               {searchResults.map((result, idx) => (
@@ -162,7 +171,6 @@ const WorkExperience = () => {
       <FormButton
         size={resumeData.workExperience.length}
         add={addWorkExperience}
-        remove={removeWorkExperience}
       />
     </div>
   );

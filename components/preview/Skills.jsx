@@ -13,13 +13,22 @@ const Skills = ({ title, skills }) => {
   return (
     skills.length > 0 && (
       <>
-        <h2 className="section-title mb-1 border-b-2 border-gray-300 editable" contentEditable suppressContentEditableWarning onBlur={handleTitleChange}>
+        <h2
+          className="section-title mb-1 border-b-2 border-gray-300 editable"
+          contentEditable
+          suppressContentEditableWarning
+          onBlur={handleTitleChange}
+        >
           {title}
         </h2>
-        <p className="sub-content">{skills.join(", ")}</p>
+        <ul className="list-disc ml-5 sub-content">
+          {skills.map((skill, index) => (
+            <li key={index}>{skill}</li>
+          ))}
+        </ul>
       </>
     )
-  );
+  )    
 };
 
 export default Skills;

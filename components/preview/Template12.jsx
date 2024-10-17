@@ -26,7 +26,7 @@ const DragDropContext = dynamic(() => import("react-beautiful-dnd").then((mod) =
 const Droppable = dynamic(() => import("react-beautiful-dnd").then((mod) => mod.Droppable), { ssr: false });
 const Draggable = dynamic(() => import("react-beautiful-dnd").then((mod) => mod.Draggable), { ssr: false })
 const Template12 = () => {
-    const { resumeData, setResumeData, headerColor } = useContext(ResumeContext);
+    const { resumeData, setResumeData, headerColor ,backgroundColorss} = useContext(ResumeContext);
     const icons = [
         { name: "github", icon: <FaGithub /> },
         { name: "linkedin", icon: <FaLinkedin /> },
@@ -262,7 +262,7 @@ const Template12 = () => {
 
         <div className="mb-6">
           <h3 className="text-xl text-blue-600 border-b-2 border-blue-600 pb-1 mb-4" style={{ color: headerColor }}>Technical Skills</h3>
-          <div className="bg-blue-600 text-white text-center py-2 rounded-md mb-2 text-sm font-semibold">
+          <div className="bg-blue-600 text-white text-center py-2 rounded-md mb-2 text-sm font-semibold" style={{ backgroundColor: backgroundColorss }}>
             <Droppable droppableId="skills" type="SKILLS">
               {(provided) => (
                 <div {...provided.droppableProps} ref={provided.innerRef}>

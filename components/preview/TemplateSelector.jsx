@@ -22,10 +22,6 @@ import template19 from './template/template19.png'
 import template20 from './template/template20.png'
 
 
-
-
-
-
 const TemplateSelector = ({ selectedTemplate, setSelectedTemplate }) => {
   const [isOpen, setIsOpen] = useState(false); // Modal state
   const [currentIndex, setCurrentIndex] = useState(1); // Middle slide index
@@ -98,22 +94,31 @@ const TemplateSelector = ({ selectedTemplate, setSelectedTemplate }) => {
   };
 
   return (
-    <div>
+    <div className="">
       <button
         onClick={openModal}
-        className="rounded-lg border-2 border-blue-800 px-5 py-2 font-bold bg-white text-blue-800"
-      >
-        Select Template
+        className="rounded-lg border-2 border-blue-800 px-5 flex py-2 font-bold bg-white text-blue-800 "
+      > 
+        Selected: {selectedTemplate !== null && (
+       
+          <p className="ms-2"> {selectedTemplate}</p>
+        
+      )}
       </button>
+
+      {/* Display selected template */}
+     
 
       {/* Modal */}
       {isOpen && (
         <div className="fixed inset-0 flex items-center justify-center z-50 bg-gray-900 bg-opacity-75">
           <div className="bg-white rounded-lg p-5 max-w-4xl w-full relative">
-            <h2 className="text-lg font-bold mb-4 text-center border rounded-3xl py-2 text-white bg-gray-800">Select a Template</h2>
+            <h2 className="text-lg font-bold mb-4 text-center border rounded-3xl py-2 text-white bg-gray-800">
+              Select a Template
+            </h2>
             
             {/* Slider */}
-            <div className="relative flex items-center ">
+            <div className="relative flex items-center">
               <button
                 onClick={goToPrevious}
                 className="absolute -left-10 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white px-6 py-4 border-4 border-white rounded-full"
@@ -121,21 +126,22 @@ const TemplateSelector = ({ selectedTemplate, setSelectedTemplate }) => {
                 &lt;
               </button>
 
-              <div className="flex justify-center w-full  overflow-hidden">
-                <div className="flex w-full ">
+              <div className="flex justify-center w-full overflow-hidden">
+                <div className="flex w-full">
                   {getDisplayedTemplates().map((template, index) => (
                     <div
                       key={template.key}
-                      className={`flex-none w-1/3 px-2 ${template.key === templates[currentIndex].key ? 'border-4 p-0 rounded-lg border-purple-500 shadow-3xl ' : ''}`}
+                      className={`flex-none w-1/3 px-2 ${
+                        template.key === selectedTemplate ? 'border-4 p-0 rounded-lg border-purple-500 shadow-3xl' : ''
+                      }`}
                       onClick={() => handleTemplateClick(template.key)}
                     >
                       <Image
                         src={template.imageUrl}
-                        style={{objectFit:'cover' , backgroundImage:'cover'}}
-                        alt={template.key}
-                        className="w-full  p-3 pt-0 object-cover rounded-lg cursor-pointer h-80"
+                        alt={`Template ${template.key}`}
+                        className="w-full p-3 pt-0 object-cover rounded-lg cursor-pointer h-80"
                       />
-                      <p className="text-center ">{template.key}</p>
+                      <p className="text-center">{template.key}</p>
                     </div>
                   ))}
                 </div>
@@ -143,7 +149,7 @@ const TemplateSelector = ({ selectedTemplate, setSelectedTemplate }) => {
 
               <button
                 onClick={goToNext}
-                className="absolute -right-10 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white px-6 py-4 border-4 border-white  rounded-full"
+                className="absolute -right-10 top-1/2 transform -translate-y-1/2 bg-gray-700 text-white px-6 py-4 border-4 border-white rounded-full"
               >
                 &gt;
               </button>
