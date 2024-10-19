@@ -478,7 +478,7 @@ const A4PageWrapper = ({ children }) => {
   
   
     return (
-      <div className="w p-5" onLoad={alertA4Size}>
+      <div className="w " onLoad={alertA4Size}>
         {children}
       </div>
     );

@@ -100,7 +100,7 @@ export default function Builder(props) {
   
     // PDF options
     const opt = {
-      pagebreak: { mode: ['avoid-all', 'css', 'legacy'] },
+      pagebreak: { mode: [ 'css', 'legacy'] },
       html2canvas: { scale: 2 }, // Optional: for better quality
     };
   
