@@ -199,7 +199,7 @@ const Preview = ({ selectedTemplate }) => {
     <button
       onClick={onClick}
       title={title}
-      className="flex items-center justify-center p-3 hover:bg-gray-200 rounded font-semibold text-lg"
+      className="flex items-center justify-center p- hover:bg-gray-200 rounded font-semibold text-lg"
     >
       {icon}
     </button>
