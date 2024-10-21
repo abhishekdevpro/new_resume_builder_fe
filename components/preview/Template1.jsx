@@ -130,16 +130,16 @@ const Template1 = () => {
               <h1 className="name" style={{ color: headerColor }}>{resumeData.name}</h1>
               <p className="profession">{resumeData.position}</p>
               <ContactInfo
-                mainclass="flex flex-row gap-1 mb-1 contact"
-                linkclass="inline-flex items-center gap-1"
+                mainclass="flex flex-row gap-1 mb-1 contact "
+                linkclass="inline-flex items-center gap-1 "
                 teldata={resumeData.contactInformation}
                 emaildata={resumeData.email}
                 addressdata={resumeData.address}
-                telicon={<MdPhone />}
-                emailicon={<MdEmail />}
-                addressicon={<MdLocationOn />}
+                telicon={<MdPhone className="text-3xl pt-1" />}
+                emailicon={<MdEmail className="text-3xl pt-1" />}
+                addressicon={<MdLocationOn className="text-3xl pt-1" />}
               />
-              <div className="grid grid-cols-3 gap-1">
+              <div className="grid grid-cols-3 gap-1 ">
               {Array.isArray(resumeData?.socialMedia) ? (
     resumeData.socialMedia.map((socialMedia, index) => {
                   return (
@@ -150,7 +150,7 @@ const Template1 = () => {
                       title={socialMedia.socialMedia}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-1 social-media align-center justify-center "
+                      className="inline-flex items-center gap-3 social-media align-center justify-center text-2xl"
                     // Prevent text overflowing, If the socialMedia.link string is longer than 32 characters, apply the wordWrap and display styles to this <a> tag.
                     // wordWrap: "break-word" breaks the text onto the next line if it's too long,
                     // display: "inline-block" is necessary for wordWrap to work on an inline element like <a>.
@@ -158,7 +158,7 @@ const Template1 = () => {
                     >
                       {icons.map((icon, index) => {
                         if (icon.name === socialMedia.socialMedia.toLowerCase()) {
-                          return <span key={index}>{icon.icon}</span>;
+                          return <span key={index} className="text-2xl pt-1">{icon.icon}</span>;
                         }
                       })}
                       {socialMedia.link}
@@ -171,7 +171,7 @@ const Template1 = () => {
                 
               </div>
             </div>
-            <hr className="border-dashed my-2" />
+           
             {/* two column start */}
             <div className="grid grid-cols-3 gap-6" >
               <div className="col-span-1 space-y-2" style={{ backgroundColor: backgroundColorss }}>

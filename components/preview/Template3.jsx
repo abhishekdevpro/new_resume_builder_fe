@@ -47,9 +47,9 @@ const Template3 = () => {
             teldata={resumeData.contactInformation}
             emaildata={resumeData.email}
             addressdata={resumeData.address}
-            telicon={<MdPhone />}
-            emailicon={<MdEmail />}
-            addressicon={<MdLocationOn />}
+            telicon={<MdPhone className="text-3xl pt-1" />}
+            emailicon={<MdEmail className="text-3xl pt-1" />}
+            addressicon={<MdLocationOn className="text-3xl pt-1"/>}
           />
         </header>
 

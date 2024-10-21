@@ -192,48 +192,20 @@
   }
 
 
-  @media print {
-    /* Apply styles specifically for PDF generation */
-    #preview-section {
-      width: 100%;
-      height: auto;
-      page-break-inside: avoid;
+  /* Print-specific styles */
+@media print {
+    .social-media {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2px; /* Adjust gap as needed */
     }
   
-    /* Ensure components don't break */
-    .flex, .p-4, .bg-white {
-      margin: 0;
-      padding: 0;
+    .social-media span {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
   }
-
   
-/* Prevent page breaks inside elements */
-.page-break {
-    page-break-inside: avoid;
-  }
-  
-  /* Add page breaks after specific sections if needed */
-  .page-break-after {
-    page-break-after: always;
-  }
-  
-  /* Ensure preview section fits the page */
-  #preview-section {
-    overflow: hidden;
-  }
-  
-  /* Optional: Set a white background for pages to prevent black areas */
-  .pdf-page {
-    background-color: white !important;
-  }
-  
-  .pdf-page {
-    background-color: white;
-  }
-  
-  .page-break {
-    page-break-before: always;
-    break-before: always;
-  }
   
