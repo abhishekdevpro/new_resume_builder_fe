@@ -34,6 +34,37 @@ const DefaultResumeData = {
       "keyAchievements": "Involved in coding as per the requirement, delivered well ahead of time which saved project cost by 20%.\nReduced database size by nearly 50% and improved its performance by 20%.\nDelivery time of good reduced by 50%.",
       "startYear": "2023-02-22",
       "endYear": "2023-03-09"
+    },
+    {
+      "company": "HellX",
+      "position": "Python Developer",
+      "description": "Heller is a Software Editor specialized in logistics management.",
+      "keyAchievements": "Involved in coding as per the requirement, delivered well ahead of time which saved project cost by 20%.\nReduced database size by nearly 50% and improved its performance by 20%.\nDelivery time of good reduced by 50%.",
+      "startYear": "2023-02-22",
+      "endYear": "2023-03-09"
+    },
+    {
+      "company": "HellX",
+      "position": "Python Developer",
+      "description": "Heller is a Software Editor specialized in logistics management.",
+      "keyAchievements": "Involved in coding as per the requirement, delivered well ahead of time which saved project cost by 20%.\nReduced database size by nearly 50% and improved its performance by 20%.\nDelivery time of good reduced by 50%.",
+      "startYear": "2023-02-22",
+      "endYear": "2023-03-09"
+    },
+    {
+      "company": "HellX",
+      "position": "Python Developer",
+      "description": "Heller is a Software Editor specialized in logistics management.",
+      "keyAchievements": "Involved in coding as per the requirement, delivered well ahead of time which saved project cost by 20%.\nReduced database size by nearly 50% and improved its performance by 20%.\nDelivery time of good reduced by 50%.",
+      "startYear": "2023-02-22",
+      "endYear": "2023-03-09"
+    }, {
+      "company": "HellX",
+      "position": "Python Developer",
+      "description": "Heller is a Software Editor specialized in logistics management.",
+      "keyAchievements": " database size by nearly 50% and improved its performance by 20%.\nDelivery time of good reduced by 50%.",
+      "startYear": "2023-02-22",
+      "endYear": "2023-03-09"
     }
   ],
   projects: [],

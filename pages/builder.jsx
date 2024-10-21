@@ -100,8 +100,15 @@ export default function Builder(props) {
   
     // PDF options
     const opt = {
-      pagebreak: { mode: [ 'css', 'legacy'] },
-      html2canvas: { scale: 2 }, // Optional: for better quality
+      margin: [0, 0], // Reduce margins to fit content correctly
+      filename: 'resume.pdf',
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: {
+        scale: 2, // Increase for better quality
+        useCORS: true, // Enable cross-origin support if needed
+      },
+      jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' },
+      pagebreak: { mode: ['avoid-all', 'css', 'legacy'], before: '#preview-section' }
     };
   
     html2pdfModule()
@@ -109,16 +116,17 @@ export default function Builder(props) {
       .set(opt)
       .toPdf()
       .get('pdf')
-      .then(pdf => {
+      .then((pdf) => {
         const totalPages = pdf.internal.getNumberOfPages();
         for (let i = 1; i <= totalPages; i++) {
           pdf.setPage(i);
           pdf.setFontSize(10);
-          pdf.text(`Page ${i} of ${totalPages}`, 10, pdf.internal.pageSize.height - 10); // Bottom left
+          pdf.text(`Page ${i} of ${totalPages}`, 10, pdf.internal.pageSize.height - 10);
         }
       })
       .save();
   };
+  
   
   
   return (
@@ -213,9 +221,15 @@ export default function Builder(props) {
                 </div>
               )}
               {/* Ref applied to Preview component */}
-              <div id="preview-section" className=" bg-white "  ref={previewRef} >
-              <Preview selectedTemplate={selectedTemplate} />
-              </div>
+              <div
+  id="preview-section"
+  className="bg-white pdf-page"
+  ref={previewRef}
+  style={{  minHeight: '11in', maxWidth: '8.5in' }}
+>
+  <Preview selectedTemplate={selectedTemplate} />
+</div>
+
             </div>
           </>
         )}
@@ -259,7 +273,7 @@ export default function Builder(props) {
            
 
             {/* Show only the preview */}
-            <div className="mt-5 bg-white" ref={previewRef}>
+            <div className=" bg-white" ref={previewRef}>
             <Preview selectedTemplate={selectedTemplate} />
             </div>
           </div>
