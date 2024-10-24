@@ -238,7 +238,7 @@ const Template7 = () => {
         </div>
       </div>
 
-      <aside className="w-4/12 bg-[#d4d4d8] rounded p-2" style={{ backgroundColor: backgroundColorss }}>
+      <aside className="w-4/12 bg-[#d4d4d8] rounded px-4 py-2" style={{ backgroundColor: backgroundColorss }}>
         <div className="mb-5">
           <h3 className="text-lg text-blue-700 mb-2" style={{ color: headerColor }}>CONTACT</h3>
           <ContactInfo

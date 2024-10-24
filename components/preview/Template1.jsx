@@ -60,7 +60,8 @@ const checkGrammar = () => {
 
 
 const Template1 = () => {
-    const { resumeData, setResumeData,headerColor,backgroundColorss } = useContext(ResumeContext);
+    const { resumeData, setResumeData,headerColor,backgroundColorss,selectedText } = useContext(ResumeContext);
+    console.log(selectedText,"selectedFont");
     const icons = [
         { name: "github", icon: <FaGithub /> },
         { name: "linkedin", icon: <FaLinkedin /> },
@@ -93,7 +94,7 @@ const Template1 = () => {
   };
   return (
     <div className="">
-     <div className="max-w-4xl mx-auto bg-white p-8 border border-gray-200 rounded-lg shadow-lg editable-content" contentEditable="true" >
+     <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-lg editable-content" contentEditable="true" >
       {/* <h1 style={{ color: headerColor }}>Template 1</h1>*/}  
         <div className="">
           <A4PageWrapper >

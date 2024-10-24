@@ -57,7 +57,7 @@ const Template1 = () => {
           .save("resume.pdf");
       };
   return (
-    <div className="max-w-4xl mx-auto bg-white p-8 border border-gray-200 rounded-lg shadow-lg">
+    <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-lg">
     <A4PageWrapper>
       <HighlightMenu
         styles={{

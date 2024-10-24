@@ -38,7 +38,7 @@ const Template5 = () => {
       ];
     
   return (
-    <div className="max-w-4xl mx-auto bg-white p-8 border border-gray-200 rounded-lg shadow-lg">
+    <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
 
     <div className="header text-center mb-6">
       <div className="flex justify-center items-center">
