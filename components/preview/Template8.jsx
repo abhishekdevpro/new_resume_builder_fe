@@ -149,7 +149,7 @@ const Template8 = () => {
                           {...provided.draggableProps}
                           {...provided.dragHandleProps}
                           className={`hover:scale-105 transition-transform duration-300 mb-1 ${snapshot.isDragging &&
-                            "outline-dashed outline-2 outline-gray-400 bg-white"
+                            "outline-dashed outline-2 outline-gray-400 bg-white "
                             }`}
                         >
                           <div className="flex flex-row justify-between space-y-1">
@@ -170,7 +170,7 @@ const Template8 = () => {
                           >
                             {(provided) => (
                               <ul
-                                className="list-disc ul-padding content"
+                                className="list-disc ul-padding content pl-2"
                                 {...provided.droppableProps}
                                 ref={provided.innerRef}
                               >

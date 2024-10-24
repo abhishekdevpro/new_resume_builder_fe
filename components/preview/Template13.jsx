@@ -81,8 +81,8 @@ const Template13 = () => {
                         if (icon.name === socialMedia.socialMedia.toLowerCase()) {
                           return <span key={index}>{icon.icon}</span>;
                         }
-                      })}
                       {socialMedia.link}
+                      })}
                     </a>
                   );
                 })}

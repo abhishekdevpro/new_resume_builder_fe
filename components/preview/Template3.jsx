@@ -37,7 +37,7 @@ const Template3 = () => {
       ];
     
   return (
-    <div className="max-w-4xl mx-auto bg-white p-8 border border-gray-200 rounded-lg shadow-lg">
+    <div className="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-lg">
         <header className="mb-6">
           <h1 className="text-4sl font-bold text-teal-600" style={{ color: headerColor }}>{resumeData.name}</h1>
           <p className="text-lg text-gray-700">{resumeData.position}</p>

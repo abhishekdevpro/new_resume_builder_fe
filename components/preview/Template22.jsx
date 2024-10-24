@@ -36,13 +36,13 @@ const Template22 = () => {
         { name: "youtube", icon: <FaYoutube /> },
         { name: "website", icon: <CgWebsite /> },
     ];
-
+console.log(resumeData,"rdddd");
     return (
         <div className="max-w-3xl mx-auto px-5 bg-white-500 shadow-md">
           <div class=""> 
             <div class="flex mb-5">
                 <div class="ml-5 px-5">
-                  <img src="img/profile_one.png"></img>
+                  <img src={resumeData.profilePicture}></img>
                 </div>
                 <div class="px-5">
                     <h1 className="text-4xl font-bold mb-2 text-blue-900" style={{ color: headerColor }}>{resumeData.name}</h1>
